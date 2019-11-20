@@ -49,54 +49,76 @@ lazy val root = project
     unusedCompileDependenciesFilter -= moduleFilter("org.scala-js", "scalajs-library")
   )
   .aggregate(
-    core.jvm,
-    core.js,
-    coreExamples.jvm,
-    coreExamples.js,
-    coreTests.jvm,
-    coreTests.js,
-    test.jvm,
-    test.js,
-    testExamples.jvm,
-    testExamples.js,
-    testTests.jvm,
-    testTests.js
+    delegateJVM,
+    // delegate.js,
+    delegateTestsJVM,
+    // delegateTests.js,
+    // core.jvm,
+    // core.js,
+    // coreExamples.jvm,
+    // coreExamples.js,
+    // coreTests.jvm,
+    // coreTests.js,
+    // test.jvm,
+    // test.js,
+    // testExamples.jvm,
+    // testExamples.js,
+    // testTests.jvm,
+    // testTests.js
   )
-  .enablePlugins(ScalaJSPlugin)
 
-lazy val core = crossProject(JSPlatform, JVMPlatform)
-  .in(file("core"))
-  .settings(stdSettings("zio-macros-core"))
-  .settings(macroSettings)
+lazy val delegate = crossProject(JVMPlatform)
+  .in(file("delegate"))
+  .settings(stdSettings("zio-macros-delegate"))
   .settings(libraryDependencies += "dev.zio" %% "zio" % zioVersion)
 
-lazy val coreExamples = crossProject(JSPlatform, JVMPlatform)
-  .in(file("core-examples"))
-  .dependsOn(core)
-  .settings(stdSettings("zio-macros-core-examples"))
-  .settings(examplesSettings)
+lazy val delegateJVM = delegate.jvm
+  .settings(dottySettings)
 
-lazy val coreTests = crossProject(JSPlatform, JVMPlatform)
-  .in(file("core-tests"))
-  .dependsOn(core)
-  .settings(stdSettings("zio-macros-core-tests"))
+lazy val delegateTests = crossProject(JVMPlatform)
+  .in(file("delegate-tests"))
+  .dependsOn(delegate)
+  .settings(stdSettings("zio-macros-delegate-tests"))
+  .settings(dottySettings)
   .settings(testSettings)
 
-lazy val test = crossProject(JSPlatform, JVMPlatform)
-  .in(file("test"))
-  .dependsOn(core)
-  .settings(stdSettings("zio-macros-test"))
-  .settings(macroSettings)
-  .settings(libraryDependencies += "dev.zio" %% "zio-test" % zioVersion)
+lazy val delegateTestsJVM = delegateTests.jvm
+  .settings(dottySettings)
 
-lazy val testExamples = crossProject(JSPlatform, JVMPlatform)
-  .in(file("test-examples"))
-  .dependsOn(test)
-  .settings(stdSettings("zio-macros-test-examples"))
-  .settings(examplesSettings)
+// lazy val core = crossProject(JSPlatform, JVMPlatform)
+//   .in(file("core"))
+//   .dependsOn(delegate)
+//   .settings(stdSettings("zio-macros-core"))
+//   .settings(macroSettings)
+//   .settings(libraryDependencies += "dev.zio" %% "zio" % zioVersion)
 
-lazy val testTests = crossProject(JSPlatform, JVMPlatform)
-  .in(file("test-tests"))
-  .dependsOn(test)
-  .settings(stdSettings("zio-macros-test-tests"))
-  .settings(testSettings)
+// lazy val coreExamples = crossProject(JSPlatform, JVMPlatform)
+//   .in(file("core-examples"))
+//   .dependsOn(core)
+//   .settings(stdSettings("zio-macros-core-examples"))
+//   .settings(examplesSettings)
+
+// lazy val coreTests = crossProject(JSPlatform, JVMPlatform)
+//   .in(file("core-tests"))
+//   .dependsOn(core)
+//   .settings(stdSettings("zio-macros-core-tests"))
+//   .settings(testSettings)
+
+// lazy val test = crossProject(JSPlatform, JVMPlatform)
+//   .in(file("test"))
+//   .dependsOn(core)
+//   .settings(stdSettings("zio-macros-test"))
+//   .settings(macroSettings)
+//   .settings(libraryDependencies += "dev.zio" %% "zio-test" % zioVersion)
+
+// lazy val testExamples = crossProject(JSPlatform, JVMPlatform)
+//   .in(file("test-examples"))
+//   .dependsOn(test)
+//   .settings(stdSettings("zio-macros-test-examples"))
+//   .settings(examplesSettings)
+
+// lazy val testTests = crossProject(JSPlatform, JVMPlatform)
+//   .in(file("test-tests"))
+//   .dependsOn(test)
+//   .settings(stdSettings("zio-macros-test-tests"))
+//   .settings(testSettings)

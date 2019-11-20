@@ -1,0 +1,49 @@
+[ {
+  "id" : "root/compile",
+  "compilerVersion" : "0.20.0-RC1",
+  "compilerArguments" : [ "-bootclasspath", "/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/resources.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/rt.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/sunrsasign.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/jsse.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/jce.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/charsets.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/jfr.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/classes" ],
+  "sourceDirectories" : [ "/Users/mschuwalow/Projects/zio-macros/src/main/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/src/main/scala", "/Users/mschuwalow/Projects/zio-macros/src/main/java", "/Users/mschuwalow/Projects/zio-macros/target/scala-0.20/src_managed/main" ],
+  "dependencyClasspath" : [ "/Users/mschuwalow/.ivy2/cache/ch.epfl.lamp/dotty-library_0.20/jars/dotty-library_0.20-0.20.0-RC1.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.1.jar" ],
+  "classDirectory" : "/Users/mschuwalow/Projects/zio-macros/target/scala-0.20/classes",
+  "projectDependencies" : [ ]
+}, {
+  "id" : "root/test",
+  "compilerVersion" : "0.20.0-RC1",
+  "compilerArguments" : [ "-bootclasspath", "/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/resources.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/rt.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/sunrsasign.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/jsse.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/jce.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/charsets.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/lib/jfr.jar:/nix/store/z0ql8nlhvxsw4lwlhrinbg1vf8p064w7-zulu1.8.0_121-8.20.0.5/jre/classes" ],
+  "sourceDirectories" : [ "/Users/mschuwalow/Projects/zio-macros/src/test/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/src/test/scala", "/Users/mschuwalow/Projects/zio-macros/src/test/java", "/Users/mschuwalow/Projects/zio-macros/target/scala-0.20/src_managed/test" ],
+  "dependencyClasspath" : [ "/Users/mschuwalow/Projects/zio-macros/target/scala-0.20/classes", "/Users/mschuwalow/.ivy2/cache/ch.epfl.lamp/dotty-library_0.20/jars/dotty-library_0.20-0.20.0-RC1.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.1.jar" ],
+  "classDirectory" : "/Users/mschuwalow/Projects/zio-macros/target/scala-0.20/test-classes",
+  "projectDependencies" : [ "root/compile" ]
+}, {
+  "id" : "delegateTestsJVM/compile",
+  "compilerVersion" : "0.20.0-RC1",
+  "compilerArguments" : [ "-deprecation", "-encoding", "UTF-8", "-feature", "-unchecked", "-Xfatal-warnings" ],
+  "sourceDirectories" : [ "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/src/main/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/src/main/scala", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/src/main/java", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/shared/src/main/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/shared/src/main/scala", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/shared/src/main/scala-dotty", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/shared/src/test/scala-dotty", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/target/scala-0.20/src_managed/main" ],
+  "dependencyClasspath" : [ "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/classes", "/Users/mschuwalow/.ivy2/cache/ch.epfl.lamp/dotty-library_0.20/jars/dotty-library_0.20-0.20.0-RC1.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.1.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio_0.20/jars/zio_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-stacktracer_0.20/jars/zio-stacktracer_0.20-1.0.0-RC17.jar" ],
+  "classDirectory" : "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/target/scala-0.20/classes",
+  "projectDependencies" : [ "delegateJVM/compile" ]
+}, {
+  "id" : "delegateTestsJVM/test",
+  "compilerVersion" : "0.20.0-RC1",
+  "compilerArguments" : [ "-deprecation", "-encoding", "UTF-8", "-feature", "-unchecked", "-Xfatal-warnings" ],
+  "sourceDirectories" : [ "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/src/test/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/src/test/scala", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/src/test/java", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/shared/src/test/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/shared/src/test/scala", "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/target/scala-0.20/src_managed/test" ],
+  "dependencyClasspath" : [ "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/target/scala-0.20/classes", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/classes", "/Users/mschuwalow/.ivy2/cache/ch.epfl.lamp/dotty-library_0.20/jars/dotty-library_0.20-0.20.0-RC1.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.1.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio_0.20/jars/zio_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-stacktracer_0.20/jars/zio-stacktracer_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-test_0.20/jars/zio-test_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-streams_0.20/jars/zio-streams_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/org.portable-scala/portable-scala-reflect_2.13/jars/portable-scala-reflect_2.13-0.1.0.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.13.0.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-test-sbt_0.20/jars/zio-test-sbt_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar" ],
+  "classDirectory" : "/Users/mschuwalow/Projects/zio-macros/delegate-tests/jvm/target/scala-0.20/test-classes",
+  "projectDependencies" : [ "delegateJVM/compile", "delegateTestsJVM/compile" ]
+}, {
+  "id" : "delegateJVM/compile",
+  "compilerVersion" : "0.20.0-RC1",
+  "compilerArguments" : [ "-deprecation", "-encoding", "UTF-8", "-feature", "-unchecked", "-Xfatal-warnings" ],
+  "sourceDirectories" : [ "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/src/main/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/src/main/scala", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/src/main/java", "/Users/mschuwalow/Projects/zio-macros/delegate/shared/src/main/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate/shared/src/main/scala", "/Users/mschuwalow/Projects/zio-macros/delegate/shared/src/main/scala-dotty", "/Users/mschuwalow/Projects/zio-macros/delegate/shared/src/test/scala-dotty", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/src_managed/main" ],
+  "dependencyClasspath" : [ "/Users/mschuwalow/.ivy2/cache/ch.epfl.lamp/dotty-library_0.20/jars/dotty-library_0.20-0.20.0-RC1.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.1.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio_0.20/jars/zio_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-stacktracer_0.20/jars/zio-stacktracer_0.20-1.0.0-RC17.jar" ],
+  "classDirectory" : "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/classes",
+  "projectDependencies" : [ ]
+}, {
+  "id" : "delegateJVM/test",
+  "compilerVersion" : "0.20.0-RC1",
+  "compilerArguments" : [ "-deprecation", "-encoding", "UTF-8", "-feature", "-unchecked", "-Xfatal-warnings" ],
+  "sourceDirectories" : [ "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/src/test/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/src/test/scala", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/src/test/java", "/Users/mschuwalow/Projects/zio-macros/delegate/shared/src/test/scala-0.20", "/Users/mschuwalow/Projects/zio-macros/delegate/shared/src/test/scala", "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/src_managed/test" ],
+  "dependencyClasspath" : [ "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/classes", "/Users/mschuwalow/.ivy2/cache/ch.epfl.lamp/dotty-library_0.20/jars/dotty-library_0.20-0.20.0-RC1.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.13.1.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio_0.20/jars/zio_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-stacktracer_0.20/jars/zio-stacktracer_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-test_0.20/jars/zio-test_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-streams_0.20/jars/zio-streams_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/org.portable-scala/portable-scala-reflect_2.13/jars/portable-scala-reflect_2.13-0.1.0.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.13.0.jar", "/Users/mschuwalow/.ivy2/cache/dev.zio/zio-test-sbt_0.20/jars/zio-test-sbt_0.20-1.0.0-RC17.jar", "/Users/mschuwalow/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar" ],
+  "classDirectory" : "/Users/mschuwalow/Projects/zio-macros/delegate/jvm/target/scala-0.20/test-classes",
+  "projectDependencies" : [ "delegateJVM/compile" ]
+} ]
